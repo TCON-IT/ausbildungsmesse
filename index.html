@@ -97,7 +97,7 @@
     }
 
     .title {
-      font-size: clamp(26px, 3.8vw, 40px);
+      font-size: clamp(20px, 2.8vw, 32px);
       line-height: 1.15;
       margin: 0
     }
@@ -386,7 +386,7 @@
     }
 
     .error-header {
-      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      background: #4b5563;
       padding: 20px;
       border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
       display: flex;
@@ -433,14 +433,14 @@
 
     .error-btn {
       appearance: none;
-      background: linear-gradient(90deg, var(--brand), var(--brand-2));
-      color: #001018;
+      background: #4b5563;
+      color: #e5e7eb;
       border: none;
       border-radius: 12px;
       padding: 12px 24px;
       font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 10px 24px rgba(0, 183, 243, .25);
+      box-shadow: none;
       transition: all 0.2s ease
     }
 
@@ -471,13 +471,11 @@
 
   <header>
     <div class="hero card">
-      <div class="pill">Ausbildungs‑Matcher (Junior)</div>
       <h1 class="title">Welche Ausbildung passt zu dir? <span>Anwendungsentwicklung</span>,
         <span>Systemintegration</span> oder <span>Digitalisierungsmanagement</span>
       </h1>
       <div class="cta" style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px">
         <a class="btn-solid" href="#quiz" id="startBtn">Eignungscheck starten</a>
-        <button class="btn-outline" id="fullscreenBtn">Vollbild</button>
       </div>
     </div>
   </header>
@@ -560,7 +558,6 @@
   <div class="error-modal" id="errorModal" role="dialog" aria-modal="true" aria-labelledby="errorTitle">
     <div class="error-dialog">
       <div class="error-header">
-        <div class="error-icon">⚠️</div>
         <h2 class="error-title" id="errorTitle">Hinweis</h2>
       </div>
       <div class="error-body">
