@@ -158,12 +158,16 @@
       }
     }
 
+
     .card {
       background: var(--card);
       border: 1px solid rgba(148, 163, 184, .18);
       border-radius: var(--radius);
       padding: 16px;
       box-shadow: var(--shadow);
+
+      display: flex;
+      flex-direction: column;
     }
 
     .card h3 {
@@ -173,10 +177,9 @@
     }
 
     .card .actions {
-      display: flex;
-      gap: 10px;
-      margin-top: 12px;
+      margin-top: auto;
     }
+
 
     /* Buttons */
     .btn-solid {
@@ -1111,37 +1114,29 @@
 
   <script>
     const QUESTIONS = [
-      { t: "Ich tüftele gern mit Programmieren oder möchte es lernen.", w: { AE: 2, SI: 1, DM: 1 } },
-      { t: "Ich mag es, am Bildschirm Schritt für Schritt eine Lösung zu bauen.", w: { AE: 2, SI: 1, DM: 1 } },
-      { t: "Ich habe Spaß an Mathe‑ oder Logikrätseln.", w: { AE: 2, SI: 1, DM: 1 } },
-      { t: "Ich stelle mir gern vor, wie eine App aussehen und funktionieren soll.", w: { AE: 2, SI: 0, DM: 1 } },
-      { t: "Ich arbeite gern länger ruhig an einer Aufgabe, bis sie läuft.", w: { AE: 2, SI: 1, DM: 1 } },
-      { t: "Ich finde es spannend zu verstehen, wie Daten in Programmen gespeichert und genutzt werden.", w: { AE: 2, SI: 0, DM: 1 } },
-      { t: "Ich möchte verstehen, wie Firmen mit Software arbeiten (z. B. mit SAP).", w: { AE: 2, SI: 0, DM: 2 } },
-      { t: "Ich probiere gern Ideen aus und verbessere sie nach und nach.", w: { AE: 2, SI: 1, DM: 2 } },
+      // --- Anwendungsentwicklung (AE) ---
+      { t: "Ich habe Spaß daran, Probleme logisch zu analysieren und Lösungen zu programmieren.", w: { AE: 2, SI: 1, DM: 1 } },
+      { t: "Ich finde es spannend, Funktionen oder Prozesse selbst zu entwickeln.", w: { AE: 2, SI: 0, DM: 1 } },
+      { t: "Ich arbeite gern kreativ daran, Anwendungen oder Tools zu gestalten.", w: { AE: 2, SI: 0, DM: 1 } },
+      { t: "Ich bleibe dran, bis ein Programm oder eine Funktion richtig funktioniert.", w: { AE: 2, SI: 1, DM: 0 } },
+      { t: "Ich interessiere mich dafür, wie Daten verarbeitet, gespeichert und strukturiert werden.", w: { AE: 2, SI: 0, DM: 1 } },
+      { t: "Ich löse gern technische oder mathematische Rätsel.", w: { AE: 2, SI: 1, DM: 0 } },
 
-      { t: "Ich richte gern Geräte ein (Laptop, Handy, Drucker).", w: { AE: 1, SI: 2, DM: 0 } },
-      { t: "Ich helfe anderen bei Computerproblemen und bleibe geduldig.", w: { AE: 0, SI: 2, DM: 2 } },
-      { t: "Mich interessiert, wie das Internet und Netzwerke funktionieren.", w: { AE: 1, SI: 2, DM: 0 } },
-      { t: "Ich vergleiche gern Technik und überlege, was zuverlässig und sicher ist.", w: { AE: 0, SI: 2, DM: 2 } },
-      { t: "Ich mag es, Dinge praktisch zu testen und schnell zum Laufen zu bringen.", w: { AE: 1, SI: 2, DM: 0 } },
-      { t: "Ich finde Ordnung wichtig (Updates, Passwörter, Backups).", w: { AE: 0, SI: 2, DM: 1 } },
+      // --- Systemintegration (SI) ---
+      { t: "Ich kann mir vorstellen, Systeme und Geräte einzurichten und zu konfigurieren.", w: { AE: 0, SI: 2, DM: 1 } },
+      { t: "Ich arbeite gern praktisch, z. B. Hardware einbauen oder Netzwerke verkabeln.", w: { AE: 1, SI: 2, DM: 0 } },
+      { t: "Ich finde es spannend, wie Netzwerke, Server und Sicherheit zusammenspielen.", w: { AE: 0, SI: 2, DM: 1 } },
+      { t: "Ich bleibe ruhig, wenn technische Probleme auftreten, und suche systematisch nach Lösungen.", w: { AE: 1, SI: 2, DM: 0 } },
+      { t: "Ich mag es, Systeme stabil, zuverlässig und ordentlich organisiert zu halten.", w: { AE: 0, SI: 2, DM: 1 } },
+      { t: "Ich teste gern Einstellungen oder Geräte, bis alles sauber funktioniert.", w: { AE: 1, SI: 2, DM: 0 } },
 
-      { t: "Ich rede gern mit Menschen, um zu verstehen, was sie brauchen.", w: { AE: 1, SI: 0, DM: 2 } },
-      { t: "Ich kann Dinge gut erklären und traue mir kleine Präsentationen zu.", w: { AE: 0, SI: 0, DM: 2 } },
-      { t: "Ich plane gern und behalte den Überblick über Aufgaben.", w: { AE: 0, SI: 1, DM: 2 } },
-      { t: "Ich überlege, wie man Abläufe einfacher und schneller machen kann.", w: { AE: 1, SI: 0, DM: 2 } },
-      { t: "Ich denke auch an Kosten und Nutzen, wenn ich entscheide.", w: { AE: 0, SI: 1, DM: 2 } },
-      { t: "Ich achte auf Regeln und Datenschutz.", w: { AE: 0, SI: 1, DM: 2 } },
-
-      { t: "Ich arbeite gern im Team und hole mir Feedback.", w: { AE: 1, SI: 1, DM: 1 } },
-      { t: "Ich bleibe dran, auch wenn etwas schwierig ist.", w: { AE: 1, SI: 1, DM: 1 } },
-      { t: "Englisch im Internet (Videos, Anleitungen) ist für mich okay.", w: { AE: 1, SI: 1, DM: 1 } },
-      { t: "Ich interessiere mich für große Programme, mit denen Firmen arbeiten (z. B. SAP).", w: { AE: 2, SI: 0, DM: 2 } },
-      { t: "Ich kann mir vorstellen, mit Kundinnen und Kunden zu arbeiten.", w: { AE: 1, SI: 0, DM: 2 } },
-      { t: "Ich finde spannend, wenn verschiedene Programme miteinander sprechen.", w: { AE: 2, SI: 1, DM: 2 } },
-      { t: "Ich kann mir vorstellen, viel am PC im Büro zu arbeiten.", w: { AE: 1, SI: 1, DM: 1 } },
-      { t: "Ich dokumentiere meine Arbeit ordentlich (Notizen, Screenshots).", w: { AE: 1, SI: 1, DM: 1 } },
+      // --- Daten‑ & Prozessmanagement (DM) ---
+      { t: "Ich spreche gern mit Menschen, um ihre Anforderungen und Ziele zu verstehen.", w: { AE: 0, SI: 0, DM: 2 } },
+      { t: "Ich mag es, Abläufe zu planen und die Übersicht zu behalten.", w: { AE: 0, SI: 1, DM: 2 } },
+      { t: "Ich interessiere mich dafür, wie man Prozesse optimieren und effizienter gestalten kann.", w: { AE: 1, SI: 0, DM: 2 } },
+      { t: "Ich kann mir vorstellen, Aufgaben zwischen Teams zu koordinieren.", w: { AE: 0, SI: 1, DM: 2 } },
+      { t: "Ich erkläre gern Dinge verständlich oder halte kleine Präsentationen.", w: { AE: 0, SI: 0, DM: 2 } },
+      { t: "Ich finde es interessant, wenn Systeme oder Programme miteinander Daten austauschen.", w: { AE: 1, SI: 1, DM: 2 } },
     ];
 
     const PROFILES = {
