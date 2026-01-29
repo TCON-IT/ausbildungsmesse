@@ -768,58 +768,35 @@
         text-align: center;
       }
 
-      .question {
-        padding: 12px;
-      }
-
-      .q-text {
-        font-size: 15px;
-      }
-
-      .options {
-        gap: 8px;
-        flex-direction: column;
-      }
-
-      .option {
-        width: 100%;
-        justify-content: flex-start;
-        padding: 10px 12px;
-      }
-
-      .chart {
-        padding: 6px;
-      }
-
-      .rows {
-        gap: 10px;
-        padding: 4px;
-      }
-
+      /* BALKEN FIX FÜR HANDY: Bleiben horizontal */
       .row {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 6px;
+        flex-direction: row;
+        /* Zwingt die horizontale Ansicht */
+        align-items: center;
+        gap: 8px;
       }
 
       .row-label {
-        flex: none;
-        font-size: 14px;
+        flex: 0 0 100px;
+        /* Schmaleres Label für Handy */
+        font-size: 11px;
         white-space: normal;
-        order: 1;
+        /* Erlaubt Zeilenumbruch falls nötig */
+        line-height: 1.1;
       }
 
       .row-bar {
-        order: 2;
-        height: 36px;
+        flex: 1;
+        height: 24px;
+        /* Etwas schlanker */
       }
 
       .row-pct {
-        flex: none;
-        order: 3;
-        align-self: flex-end;
-        font-size: 15px;
-        padding: 6px 10px;
+        flex: 0 0 45px;
+        /* Kompakterer Prozentwert */
+        font-size: 12px;
+        padding: 3px 6px;
+        text-align: center;
       }
 
       .result-badge {
@@ -830,59 +807,64 @@
         margin-bottom: 8px;
       }
 
-      #winnerHint {
-        font-size: 14px;
-        text-align: center;
-        display: block;
-      }
-
       .modal-dialog {
         border-radius: 16px;
         max-height: 92vh;
-      }
-
-      .modal-head {
-        padding: 14px 16px;
-      }
-
-      .modal-title {
-        font-size: 18px;
-        padding-right: 8px;
       }
 
       .modal-body {
         padding: 16px;
         font-size: 15px;
       }
-
-      .close-x {
-        font-size: 32px;
-      }
-
-      .error-dialog {
-        max-width: calc(100% - 32px);
-      }
-
-      .error-header {
-        padding: 16px;
-      }
-
-      .error-title {
-        font-size: 18px;
-      }
-
-      .error-body {
-        padding: 20px 16px;
-      }
-
-      .error-message {
-        font-size: 15px;
-      }
-
-      .error-footer {
-        padding: 0 16px 16px;
-      }
     }
+
+    .modal-dialog {
+      border-radius: 16px;
+      max-height: 92vh;
+    }
+
+    .modal-head {
+      padding: 14px 16px;
+    }
+
+    .modal-title {
+      font-size: 18px;
+      padding-right: 8px;
+    }
+
+    .modal-body {
+      padding: 16px;
+      font-size: 15px;
+    }
+
+    .close-x {
+      font-size: 32px;
+    }
+
+    .error-dialog {
+      max-width: calc(100% - 32px);
+    }
+
+    .error-header {
+      padding: 16px;
+    }
+
+    .error-title {
+      font-size: 18px;
+    }
+
+    .error-body {
+      padding: 20px 16px;
+    }
+
+    .error-message {
+      font-size: 15px;
+    }
+
+    .error-footer {
+      padding: 0 16px 16px;
+    }
+
 
     /* Sehr kleine Smartphones (max 380px) */
     @media (max-width: 380px) {
