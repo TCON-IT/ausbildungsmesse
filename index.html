@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ausbildungs‑Matcher (Junior) – SAP Beratungshaus</title>
+  <title>Ausbildungs‑Matcher (Junior) – SAP Beratungshaus
+    Popup Beispiel
 
-  <title>Popup Beispiel</title>
+  </title>
   <style>
     /* Der halbtransparente Hintergrund */
     #popup-overlay {
@@ -596,6 +597,7 @@
       border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 12px
     }
 
@@ -607,7 +609,8 @@
     }
 
     .error-body {
-      padding: 24px 20px
+      display: block;
+      padding: 24px 20px;
     }
 
     .error-message {
@@ -615,7 +618,8 @@
       line-height: 1.6;
       color: var(--text);
       margin: 0 0 20px;
-      text-align: center
+      text-align: center;
+      justify-content: center;
     }
 
     .error-footer {
@@ -938,7 +942,8 @@
     }
 
     .error-dialog {
-      max-width: calc(100% - 32px);
+      max-width: 50vw;
+      width: fit-content;
     }
 
     .error-header {
@@ -947,10 +952,6 @@
 
     .error-title {
       font-size: 18px;
-    }
-
-    .error-body {
-      padding: 20px 16px;
     }
 
     .error-message {
@@ -1105,7 +1106,7 @@
               data-title="Kaufmännisch – Digitalisierungsmanagement"
               data-text="Du findest es spannend, was Software im Unternehmen möglich macht und möchtest dabei auch programmieren lernen? In deiner Ausbildung lernst du, wie SAP als digitale Lösung Geschäftsprozesse besser macht – und wie du als Berater:in mit Verständnis für Technik, Organisation und Kommunikation genau daran mitarbeitest. Du bringst dich in Projekte ein, arbeitest mit verschiedenen Teams zusammen und wächst Schritt für Schritt in die Welt der Digitalisierung und Beratung hinein.">Info</button>
             <a class="btn-outline" href="https://careers.team-con.de/go/Alle-Stellenangebote/3791901/"
-              target="_blank">Mehr Erfahren</a>
+              target="_blank">Mehr erfahren</a>
           </div>
         </article>
         <article class="card col-4">
@@ -1113,7 +1114,7 @@
           <div class="actions"><button class="btn-outline info-btn" data-title="Fachinformatik – Systemintegration"
               data-text="Du sorgst dafür, dass unsere IT läuft. Du lernst, Netzwerke einzurichten, Server zu betreuen und User zu unterstützen. Technik im Hintergrund? Ohne dich geht hier nichts.">Info</button>
             <a class="btn-outline" href="https://careers.team-con.de/go/Alle-Stellenangebote/3791901/"
-              target="_blank">Mehr Erfahren</a>
+              target="_blank">Mehr erfahren</a>
           </div>
         </article>
         <article class="card col-4">
@@ -1122,7 +1123,7 @@
               data-title="Fachinformatik – Anwendungsentwicklung (SAP)"
               data-text="Du entwickelst Software, die was kann und gebraucht wird. Mit Köpfchen und Kreativität schreibst du Code, testest Programme und findest Lösungen für echte Aufgaben. So wird aus Theorie Praxis.">Info</button>
             <a class="btn-outline" href="https://careers.team-con.de/go/Alle-Stellenangebote/3791901/"
-              target="_blank">Mehr Erfahren</a>
+              target="_blank">Mehr erfahren</a>
           </div>
         </article>
       </section>
@@ -1164,7 +1165,7 @@
             <h3>Empfehlung</h3>
             <div id="winnerText"></div>
             <div class="cta" style="margin-top:16px">
-              <button class="btn-outline" onclick="window.print()">Ergebnis als PDF</button>
+              <button class="btn-outline" onclick="window.print()">Ergebnis als PDF speichern</button>
               <button class="btn-outline" id="restartBtn">Neu starten</button>
             </div>
           </aside>
@@ -1253,7 +1254,7 @@
              Du testest praktisch, hältst Ordnung (Updates, Sicherheit) und erklärst geduldig. So hältst du die IT am Laufen. Rede auch gerne mit den Leuten an unserem Stand über dein Ergebnis.` },
         DM: {
           name: "Kaufmännisch – Digitalisierungsmanagement", desc: `Du passt gut zum Digitalisierungsmanagement. Du sprichst gern mit Menschen, planst, erklärst und machst Abläufe einfacher.
-             Du behältst Kosten/Nutzen im Blick und achtest auf Regeln. Gemeinsam mit uns setzt du passende digitale Lösungen um – oft mit SAP. Rede auch gerne mit den Leuten an unserem Stand über dein Ergebnis.^^` }
+             Du behältst Kosten/Nutzen im Blick und achtest auf Regeln. Gemeinsam mit uns setzt du passende digitale Lösungen um – oft mit SAP. Rede auch gerne mit den Leuten an unserem Stand über dein Ergebnis.` }
       };
 
       const listEl = document.getElementById('questionList');
