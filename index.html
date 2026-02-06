@@ -52,7 +52,7 @@
       padding: 12px 18px;
       font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 10px 24px rgba(255, 141, 11, .25);
+      box-shadow: 0 10px 24px #ff8d0b40;
       font-size: 16px;
       transition: all 0.2s ease;
       margin-top: 10px;
@@ -77,7 +77,9 @@
       <h2>Datenschutz- und Einverständniserklärung</h2>
       <p>Diese Website nutzt ausschließlich technisch notwendige Cookies, um den Eignungstest sicher und stabil
         bereitzustellen. Wir führen kein Tracking durch und geben keine Daten an Werbenetzwerke weiter. Weitere
-        Informationen finden Sie in unserer Datenschutzerklärung.</p>
+        Informationen finden Sie in unserer <a href="https://www.tcon.com/datenschutz" style="color: white;"
+          target="_blank">Datenschutzerklärung</a>.</p>
+
       <button onclick="closePopup()">Verstanden</button>
     </div>
   </div>
@@ -1089,9 +1091,10 @@
 
     <header>
       <div class="hero card">
-        <h1 class="title">Welche Ausbildung passt zu dir? <span> Fachinformatiker für Anwendungsentwicklung</span>,
-          <span>Fachinformatiker für Systemintegration</span> oder <span>Kaufmann/-frau für
-            Digitalisierungsmanagement</span>
+        <h1 class="title">Welche Ausbildung bei T.CON passt zu dir?<br>
+          <span>Fachinformatiker für Anwendungsentwicklung(m/w/d)</span>,<br>
+          <span>Fachinformatiker für Systemintegration (m/w/d)</span> oder <br>
+          <span>Kaufmann/-frau für Digitalisierungsmanagement (m/w/d)</span>
         </h1>
         <div class="cta">
           <a class="btn-solid" href="#quiz" id="startBtn">Eignungstest starten</a>
@@ -1160,14 +1163,19 @@
               <div id="chartRows" class="rows" role="img" aria-label="Horizontales Balkendiagramm mit Ergebnissen">
               </div>
             </div>
-            <button type="button" class="btn-outline" style="margin-top: 20px;"
-              onclick="window.location.href='spiel.html'">Spielquiz starten</button>
+            <div style="margin-top: 14px;"><a style="font-weight: 700; font-size: 18px; margin-top: 30px;">Wenn du Lust
+                hast, kannst du noch ein
+                kleines Spielquiz machen
+                zu dem Beruf,
+                der am besten zu dir passt. </a>
+            </div>
           </div>
           <aside class="span-5">
             <h3>Empfehlung</h3>
             <div id="winnerText"></div>
             <div class="cta" style="margin-top:16px">
-              <button class="btn-outline" onclick="window.print()">Ergebnis als PDF speichern</button>
+              <button type="button" class="btn-outline" onclick="window.location.href='spiel.html'">Spielquiz
+                starten</button>
               <button class="btn-outline" id="restartBtn">Neu starten</button>
             </div>
           </aside>
@@ -1250,13 +1258,13 @@
         AE: {
           name: "Fachinformatik – Anwendungsentwicklung (SAP)", desc: `Du passt gut zur Anwendungsentwicklung. Du baust gern Lösungen am Computer, bleibst dran und hast Interesse daran,
              wie Firmen mit Software arbeiten. Bei uns geht es viel um SAP – später lernst du z. B., wie man Oberflächen baut und
-             Funktionen programmiert. Schritt für Schritt, im Team. Rede auch gerne mit den Leuten an unserem Stand über dein Ergebnis.` },
+             Funktionen programmiert. Schritt für Schritt, im Team. Rede auch gerne mit den Mitarbeitern an unserem Stand über dein Ergebnis.` },
         SI: {
           name: "Fachinformatik – Systemintegration", desc: `Du passt gut zur Systemintegration. Du richtest gern Geräte ein, hilfst anderen und willst, dass Technik zuverlässig läuft.
-             Du testest praktisch, hältst Ordnung (Updates, Sicherheit) und erklärst geduldig. So hältst du die IT am Laufen. Rede auch gerne mit den Leuten an unserem Stand über dein Ergebnis.` },
+             Du testest praktisch, hältst Ordnung (Updates, Sicherheit) und erklärst geduldig. So hältst du die IT am Laufen. Rede auch gerne mit den Mitarbeitern an unserem Stand über dein Ergebnis.` },
         DM: {
           name: "Kaufmännisch – Digitalisierungsmanagement", desc: `Du passt gut zum Digitalisierungsmanagement. Du sprichst gern mit Menschen, planst, erklärst und machst Abläufe einfacher.
-             Du behältst Kosten/Nutzen im Blick und achtest auf Regeln. Gemeinsam mit uns setzt du passende digitale Lösungen um – oft mit SAP. Rede auch gerne mit den Leuten an unserem Stand über dein Ergebnis.` }
+             Du behältst Kosten/Nutzen im Blick und achtest auf Regeln. Gemeinsam mit uns setzt du passende digitale Lösungen um – oft mit SAP. Rede auch gerne mit den Mitarbeitern an unserem Stand über dein Ergebnis.` }
       };
 
       const listEl = document.getElementById('questionList');
